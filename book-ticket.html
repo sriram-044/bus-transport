@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Tamil Nadu Bus Ticket</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar" role="banner">
+    <div class="container nav-container">
+      <div class="logo" aria-label="Tamil Nadu Bus Transport logo">🚍 Tamil Nadu Bus</div>
+      <ul class="nav-links" role="navigation">
+        <li><a href="index1.html#home" aria-label="Go to Home section">Home</a></li>
+        <li><a href="index1.html#routes" aria-label="Go to Routes section">Routes</a></li>
+        <li><a href="index1.html#schedules" aria-label="Go to Schedules section">Schedules</a></li>
+        <li><a href="index1.html#contact" aria-label="Go to Contact section">Contact</a></li>
+        <li><a href="book-ticket.html" aria-label="Book a ticket">Book Ticket</a></li>
+        <li><a href="pnr.html" aria-label="Check PNR status">PNR Status</a></li>
+        <li><a href="login.html" aria-label="Log in">Login</a></li>
+      </ul>
+      <div class="menu-icon" aria-label="Toggle navigation menu" role="button" tabindex="0"><i class="fa-solid fa-bars"></i></div>
+    </div>
+  </header>
+
+  <div class="container booking-container">
+    <h2>Book Tamil Nadu Bus Ticket</h2>
+    <form id="bookingForm" aria-label="Bus ticket booking form">
+      <label for="name">Full Name</label>
+      <input type="text" id="name" name="name" placeholder="Your full name" required aria-required="true"/>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="your.email@example.com" required aria-required="true"/>
+      <label for="route">Select Route</label>
+      <select id="route" name="route" required aria-required="true">
+        <option value="">-- Select Route --</option>
+      </select>
+      <label for="bus">Select Bus</label>
+      <select id="bus" name="bus" required aria-required="true" disabled>
+        <option value="">-- Select a route first --</option>
+      </select>
+      <div id="busInfo" class="bus-info" style="display: none;">
+        <p><strong>Available Seats:</strong> <span id="availableSeats">0</span> / <span id="totalSeats">40</span></p>
+      </div>
+      
+      <div id="seatSelectionContainer" style="display: none;">
+        <h3>Select Your Seat</h3>
+        <div class="seat-legend">
+          <span><div class="legend-box available"></div> Available</span>
+          <span><div class="legend-box selected"></div> Selected</span>
+          <span><div class="legend-box booked"></div> Booked</span>
+        </div>
+        <div id="seatLayout" class="seat-layout"></div>
+        <p class="selected-seat-info">Selected Seat: <strong id="selectedSeatNumber">None</strong></p>
+      </div>
+
+      <button type="submit" id="bookBtn" aria-label="Book ticket" disabled>Book Ticket</button>
+    </form>
+    <a href="index1.html" class="back-link" aria-label="Back to home page">← Back to Home</a>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

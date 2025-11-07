@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tamil Nadu Bus Transport</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Header / Navbar -->
+  <header class="navbar" role="banner">
+    <div class="container nav-container">
+      <div class="logo" aria-label="Tamil Nadu Bus Transport logo">🚍 Tamil Nadu Bus</div>
+      <ul class="nav-links" role="navigation">
+        <li><a href="#home" aria-label="Go to Home section">Home</a></li>
+        <li><a href="#routes" aria-label="Go to Routes section">Routes</a></li>
+        <li><a href="#schedules" aria-label="Go to Schedules section">Schedules</a></li>
+        <li><a href="#contact" aria-label="Go to Contact section">Contact</a></li>
+        <li><a href="book-ticket.html" aria-label="Book a ticket">Book Ticket</a></li>
+        <li><a href="pnr.html" aria-label="Check PNR status">PNR Status</a></li>
+        <li><a href="login.html" aria-label="Log in">Login</a></li>
+      </ul>
+      <div class="menu-icon" aria-label="Toggle navigation menu" role="button" tabindex="0"><i class="fa-solid fa-bars"></i></div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero" role="region" aria-label="Welcome section">
+    <div class="hero-content">
+      <h1>Welcome to Tamil Nadu State Transport</h1>
+      <p>Reliable, Affordable, and Safe Bus Travel Across Tamil Nadu</p>
+      <button class="cta-btn" onclick="window.location.href='book-ticket.html'" aria-label="Book your bus ticket">Book Your Ticket</button>
+      <button class="cta-btn" onclick="window.location.href='pnr.html'" aria-label="Check your ticket status">Check Your Ticket</button>
+    </div>
+  </section>
+
+  <!-- Routes Section -->
+  <section id="routes" class="routes-section" role="region" aria-label="Popular routes">
+    <div class="container">
+      <h2>Popular Tamil Nadu Routes</h2>
+      <div class="route-grid">
+        <div class="route-card">
+          <i class="fa-solid fa-bus"></i>
+          <h3>Chennai → Madurai</h3>
+          <p>Non-stop AC and express buses available every 2 hours connecting major cities.</p>
+        </div>
+        <div class="route-card">
+          <i class="fa-solid fa-bus-simple"></i>
+          <h3>Coimbatore → Ooty</h3>
+          <p>Scenic hill route with frequent morning services and tourist coaches.</p>
+        </div>
+        <div class="route-card">
+          <i class="fa-solid fa-road"></i>
+          <h3>Trichy → Thanjavur</h3>
+          <p>Short intercity route with buses every 30 minutes for commuters and students.</p>
+        </div>
+        <div class="route-card">
+          <i class="fa-solid fa-building"></i>
+          <h3>Salem → Erode</h3>
+          <p>Frequent hourly services with comfortable seating and minimal stops.</p>
+        </div>
+        <div class="route-card">
+          <i class="fa-solid fa-landmark"></i>
+          <h3>Madurai → Rameswaram</h3>
+          <p>Popular pilgrimage route with express and deluxe buses every 3 hours.</p>
+        </div>
+        <div class="route-card">
+          <i class="fa-solid fa-city"></i>
+          <h3>Chennai → Pondicherry</h3>
+          <p>Coastal route offering luxury and government buses every 1.5 hours.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Schedules Section -->
+  <section id="schedules" class="schedule-section" role="region" aria-label="Bus schedules">
+    <div class="container">
+      <h2>Bus Schedules</h2>
+      <table role="grid">
+        <thead>
+          <tr>
+            <th>Route</th>
+            <th>Departure</th>
+            <th>Arrival</th>
+            <th>Frequency</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Chennai → Madurai</td>
+            <td>06:00 AM</td>
+            <td>01:30 PM</td>
+            <td>Every 2 Hours</td>
+          </tr>
+          <tr>
+            <td>Coimbatore → Ooty</td>
+            <td>05:30 AM</td>
+            <td>08:00 AM</td>
+            <td>Every 2 Hours</td>
+          </tr>
+          <tr>
+            <td>Trichy → Thanjavur</td>
+            <td>07:15 AM</td>
+            <td>08:00 AM</td>
+            <td>Every 30 Minutes</td>
+          </tr>
+          <tr>
+            <td>Salem → Erode</td>
+            <td>08:30 AM</td>
+            <td>09:45 AM</td>
+            <td>Every 45 Minutes</td>
+          </tr>
+          <tr>
+            <td>Madurai → Rameswaram</td>
+            <td>09:00 AM</td>
+            <td>12:00 PM</td>
+            <td>Every 3 Hours</td>
+          </tr>
+          <tr>
+            <td>Chennai → Pondicherry</td>
+            <td>08:00 AM</td>
+            <td>11:00 AM</td>
+            <td>Every 1.5 Hours</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact-section" role="region" aria-label="Contact us">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form id="feedbackForm" aria-label="Contact form">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required aria-required="true"/>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="your.email@example.com" required aria-required="true"/>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" placeholder="Your message..." rows="5" aria-required="false"></textarea>
+        <label for="rating">Rating</label>
+        <select id="rating" name="rating" aria-required="false">
+          <option value="5">⭐️⭐️⭐️⭐️⭐️ Excellent</option>
+          <option value="4">⭐️⭐️⭐️⭐️ Good</option>
+          <option value="3">⭐️⭐️⭐️ Average</option>
+          <option value="2">⭐️⭐️ Poor</option>
+          <option value="1">⭐️ Terrible</option>
+        </select>
+        <button type="submit" aria-label="Submit feedback">Send</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer role="contentinfo">
+    <div class="container footer-content">
+      <p>&copy; 2025 Tamil Nadu Bus Transport. All rights reserved.</p>
+      <div class="social-icons">
+        <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+        <a href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

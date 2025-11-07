@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Check Bus PNR Status - Tamil Nadu Transport</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header class="navbar" role="banner">
+    <div class="container nav-container">
+      <div class="logo" aria-label="Tamil Nadu Bus Transport logo">🚍 Tamil Nadu Bus</div>
+      <ul class="nav-links" role="navigation">
+        <li><a href="index1.html#home" aria-label="Go to Home section">Home</a></li>
+        <li><a href="index1.html#routes" aria-label="Go to Routes section">Routes</a></li>
+        <li><a href="index1.html#schedules" aria-label="Go to Schedules section">Schedules</a></li>
+        <li><a href="index1.html#contact" aria-label="Go to Contact section">Contact</a></li>
+        <li><a href="book-ticket.html" aria-label="Book a ticket">Book Ticket</a></li>
+        <li><a href="pnr.html" aria-label="Check PNR status">PNR Status</a></li>
+        <li><a href="login.html" aria-label="Log in">Login</a></li>
+      </ul>
+      <div class="menu-icon" aria-label="Toggle navigation menu" role="button" tabindex="0"><i class="fa-solid fa-bars"></i></div>
+    </div>
+  </header>
+
+  <div class="container pnr-container">
+    <h2>Check Your Bus PNR Status</h2>
+    <form id="pnrForm" aria-label="PNR status check form">
+      <label for="pnrInput">PNR Number</label>
+      <input type="text" id="pnrInput" name="pnrInput" placeholder="Enter your PNR Number" pattern="[A-Z0-9]{10}" required aria-required="true"/>
+      <button type="submit" aria-label="Check PNR status">Check Status</button>
+    </form>
+    <div class="result" id="pnrResult" role="region" aria-live="polite">
+      <h3>Booking Details</h3>
+      <p><strong>PNR:</strong> <span id="pnrDisplay"></span></p>
+      <p><strong>Passenger Name:</strong> <span id="nameDisplay"></span></p>
+      <p><strong>Route:</strong> <span id="routeDisplay"></span></p>
+      <p><strong>Bus Number:</strong> <span id="busNumberDisplay"></span></p>
+      <p><strong>Seat Number:</strong> <span id="seatNumberDisplay"></span></p>
+      <p><strong>Departure Date:</strong> <span id="departureDateDisplay"></span></p>
+      <p><strong>Departure Time:</strong> <span id="departureTimeDisplay"></span></p>
+      <p><strong>Fare:</strong> ₹<span id="fareDisplay"></span></p>
+      <p><strong>Booking Status:</strong> <span id="statusDisplay" class="status-badge"></span></p>
+      <p><strong>Booked On:</strong> <span id="bookingDateDisplay"></span></p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
