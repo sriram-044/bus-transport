@@ -87,7 +87,7 @@ javascript
 Frontend: HTML, CSS, JavaScript
 Backend: Node.js, Express
 Database: PostgreSQL
-Security: bcrypt (password encryption)
+Security: bcrypt (password encryption) 
 Communication: REST API (JSON)
 🚀 Simple Flow Diagram
 User (Browser)
